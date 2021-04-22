@@ -8,7 +8,9 @@ import {
   TableColumn,
   Loading,
   MessageBox,
-  Message
+  Message,
+  Input,
+  InputNumber
   //   Notification
 } from 'element-ui'
 
@@ -18,6 +20,8 @@ Vue.use(Button)
 Vue.use(ButtonGroup)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Input)
+Vue.use(InputNumber)
 Vue.use(Loading.directive)
 
 Vue.prototype.$loading = Loading.service

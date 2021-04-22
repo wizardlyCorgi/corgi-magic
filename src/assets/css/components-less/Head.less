@@ -1,0 +1,65 @@
+.head-component {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  // line-height: 60px;
+  padding: 10px 40px;
+  padding-left: 0;
+  border: 1px solid #eaecef;
+  position: fixed;
+
+  .left-head {
+    .solgan {
+      font-size: 20px;
+    }
+    .logo {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .right-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .input-box {
+      padding-left: 10px;
+      border: 1px solid #ebebeb;
+      width: 216px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      overflow: hidden;
+      border-radius: 20px;
+      /deep/ .el-input__inner {
+        height: 32px;
+        border: 0;
+      }
+      .el-icon-search {
+        font-size: 16px;
+      }
+    }
+    .navbars {
+      margin-left: 20px;
+      .nav-ul {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tabs-item {
+          margin-right: 20px;
+          font-weight: 500;
+          padding-bottom: 2px;
+          &:hover {
+            border-bottom: 2px solid #46bd87;
+          }
+        }
+      }
+    }
+  }
+}
