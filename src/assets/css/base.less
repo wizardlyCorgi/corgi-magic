@@ -4,6 +4,10 @@
 // 前端程序员在写页面的时候会把这些默认的样式都清除掉
 // 让所有标签的外观效果在所有浏览器表现一致
 // 这个步骤就是css的初始化。
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
 html,
 body,
 div,
@@ -54,20 +58,20 @@ a {
   color: #2d374b;
   text-decoration: none;
 }
-a:link {
-  color: #fff;
-}
-a:visited {
-  color: #fff;
-}
-a:hover {
-  //   color: #fff;
-  color: #cd0200;
-  text-decoration: underline;
-}
-a:active {
-  color: #fff;
-}
+// a:link {
+//   color: #fff;
+// }
+// a:visited {
+//   color: #fff;
+// }
+// a:hover {
+//   //   color: #fff;
+//   color: #cd0200;
+//   text-decoration: underline;
+// }
+// a:active {
+//   color: #fff;
+// }
 input::-ms-clear {
   display: none;
 }
@@ -111,16 +115,16 @@ li {
 .clear {
   clear: both;
 }
-.clearleft {
+.clear-left {
   clear: left;
 }
-.clearright {
+.clear-right {
   clear: right;
 }
-.floatleft {
+.float-left {
   float: left;
 }
-.floatright {
+.float-right {
   float: right;
 }
 .cursor {
@@ -144,4 +148,9 @@ li {
 // 进度条
 #nprogress .bar {
   background: #46bd87 !important;
+}
+
+// 解决闪烁问题
+[v-cloak] {
+  display: none;
 }

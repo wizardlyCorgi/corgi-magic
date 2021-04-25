@@ -48,6 +48,15 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
+// 进度条速度，一般不用控制自行加载
+// NProgress.inc(0.2);
+NProgress.configure({
+  // easing: 'ease',  // 动画方式
+  speed: 100, // 递增进度条的速度
+  showSpinner: false // 是否显示加载ico
+  // trickleSpeed: 200, // 自动递增间隔
+  // minimum: 0.3 // 初始化时的最小百分比
+})
 
 router.beforeEach((to, from, next) => {
   NProgress.start() // 显示进度条
@@ -57,4 +66,5 @@ router.beforeEach((to, from, next) => {
 router.afterEach(() => {
   NProgress.done() // 完成进度条
 })
+
 export default router

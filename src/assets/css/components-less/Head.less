@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 60px;
   // line-height: 60px;
   padding: 10px 40px;
   padding-left: 0;
@@ -15,10 +15,12 @@
   .left-head {
     .solgan {
       font-size: 20px;
+      padding-left: 40px;
+      display: inline-block;
     }
     .logo {
-      width: 140px;
-      height: 140px;
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -46,18 +48,32 @@
       }
     }
     .navbars {
-      margin-left: 20px;
+      // margin-left: 20px;
       .nav-ul {
         font-size: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-weight: 500;
         .tabs-item {
           margin-right: 20px;
-          font-weight: 500;
           padding-bottom: 2px;
           &:hover {
             border-bottom: 2px solid #46bd87;
+          }
+        }
+        .active {
+          border-bottom: 2px solid #46bd87;
+        }
+        .to-Github {
+          // color: black;
+          font-weight: 500;
+          .el-icon-place {
+            font-size: 18px;
+            // color: gray;
+          }
+          &:hover {
+            color: #46bd87 !important;
           }
         }
       }

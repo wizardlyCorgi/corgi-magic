@@ -2,10 +2,11 @@
   <div class="head-component">
     <!-- 左边logo以及跳转首页的事件 -->
     <div class="left-head cursor" @click="toIndex">
-      <!-- <span class="solgan">CORGI</span> -->
+      <h1 class="solgan">CORGI</h1>
       <img class="logo" src="@/assets/img/corgilogo.gif" alt="" />
     </div>
     <div class="right-head">
+      <!-- 搜索框 -->
       <!-- todo 边框变绿过渡效果==>参考vue官网 -->
       <div class="input-box" :style="isFocus ? focusStyle : ''">
         <i class="el-icon-search"></i>
@@ -17,13 +18,15 @@
           @blur="inputBlur"
         ></el-input>
       </div>
+      <!-- 导航栏 -->
       <div class="navbars">
         <ul class="nav-ul">
           <li
             class="tabs-item cursor"
             v-for="(item, index) in tabsData"
             :key="index"
-            @click="$router.push(`${item.path}`)"
+            @click="toDetail(item, index)"
+            :class="currentIndex === index ? 'active' : ''"
           >
             {{ item.text }}
           </li>
@@ -32,6 +35,8 @@
               href="https://github.com/wizardlyCorgi"
               target="_blank"
               rel="noopener noreferrer"
+              class="to-Github"
+              >Github<i class="el-icon-place"></i
             ></a>
           </li>
         </ul>
@@ -83,7 +88,8 @@ export default {
           path: '/',
           isClick: false
         }
-      ]
+      ],
+      currentIndex: null
     }
   },
   methods: {
@@ -96,6 +102,10 @@ export default {
     toIndex () {
       if (this.$route.fullPath === '/home') return
       this.$router.push('/')
+    },
+    toDetail (item, index) {
+      this.$router.push(`${item.path}`)
+      this.currentIndex = index
     }
   }
 }
